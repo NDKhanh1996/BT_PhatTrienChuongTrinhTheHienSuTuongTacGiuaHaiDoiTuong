@@ -5,10 +5,12 @@ class SwitchButton {
     }
 
     SwitchButton() {
-        if (this.switchOn()) {
-            return this.switchOff()
-        } else if (this.switchOff()) {
-            return this.switchOn
+        if (this.status) {
+            this.switchOff()
+            return this.lamp.status = true
+        } else {
+            this.switchOn()
+            return this.lamp.status = false;
         }
     }
 
@@ -17,12 +19,10 @@ class SwitchButton {
     }
 
     switchOff() {
-        this.lamp.status = false;
         return this.status = false
     }
 
     switchOn() {
-        this.lamp.status = true
         return this.status = true
     }
 }

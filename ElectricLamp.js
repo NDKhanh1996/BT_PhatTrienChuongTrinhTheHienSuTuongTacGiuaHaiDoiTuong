@@ -1,8 +1,9 @@
-class ElectricLamp{
+class ElectricLamp {
     constructor(status) {
         this.status = status
     }
-    getStatus(){
+
+    getStatus() {
         return this.status
     }
 
